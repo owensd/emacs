@@ -30,13 +30,16 @@
 (ido-mode t)
 
 ; Setup my custom theme
+(add-to-list 'load-path "~/.emacs.d/themes/emacs-color-theme-alect")
 (add-to-list 'custom-theme-load-path "~/.emacs.d/themes")
+(add-to-list 'custom-theme-load-path "~/.emacs.d/themes/emacs-color-theme-alect")
 (add-to-list 'custom-theme-load-path "~/.emacs.d/themes/emacs-color-theme-solarized")
-(load-theme 'solarized-dark t)
+(add-to-list 'custom-theme-load-path "~/.emacs.d/themes/emacs-color-theme-aurora")
+(load-theme 'alect-dark t)
 
 ; Make my window size correct
-(add-to-list 'default-frame-alist '(height . 60))
-(add-to-list 'default-frame-alist '(width . 195))
+(add-to-list 'default-frame-alist '(height . 75))
+(add-to-list 'default-frame-alist '(width . 250))
 (split-window-horizontally)
 
 ; Turn off the toolbar
@@ -50,8 +53,8 @@
 (scroll-bar-mode 0)
 
 ; Set the fonts
-(add-to-list 'default-frame-alist '(font . "Menlo-12"))
-(set-face-attribute 'default t :font "Menlo-12")
+(add-to-list 'default-frame-alist '(font . "LiberationMono-12"))
+(set-face-attribute 'default t :font "LiberationMono-12")
 
 ; Compilation
 (setq compilation-directory-locked nil)
